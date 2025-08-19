@@ -1,0 +1,128 @@
+{
+  "info": {
+    "name": "Appointment Schedule API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "List Availabilities",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/lawyers/1/availabilities",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "lawyers",
+            "1",
+            "availabilities"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Schedule Appointment",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\\n  \\\"lawyerId\\\": 1,\\n  \\\"clientId\\\": 1,\\n  \\\"availabilityId\\\": 1\\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/appointments",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "appointments"
+          ]
+        }
+      }
+    },
+    {
+      "name": "View Lawyer Appointments",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/lawyers/1/appointments",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "lawyers",
+            "1",
+            "appointments"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Cancel Appointment",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/appointments/1/cancel",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "appointments",
+            "1",
+            "cancel"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Reschedule Appointment",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\\n  \\\"appointmentId\\\": 1,\\n  \\\"availabilityId\\\": 2\\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/appointments/reschedule",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "appointments",
+            "reschedule"
+          ]
+        }
+      }
+    }
+  ]
+}
